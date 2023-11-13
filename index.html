@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftDispatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="box">
+        <!-- Image placeholder -->
+        <img src="image/download (1).png" alt="SwiftDispatch Logo" class="logo" id="logoImage">
+
+        <div class="dropdown">SwiftDispatch
+            <span class="left-icon"></span>
+            <span class="right-icon"></span>
+            <div class="items">
+                <a href="login.html" style="--i:1;"><span></span>login</a>
+                <a href="register.html" style="--i:2;"><span></span>Register</a>
+                <a href="home.html" style="--i:3;"><span></span>continue</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const logoImage = document.getElementById('logoImage');
+        const images = ["image/download (1).png", "image/download (1).png", "image/download (1).png"]; // Add more image paths as needed
+        let currentIndex = 0;
+
+        function cycleImages() {
+            logoImage.src = images[currentIndex];
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        // Set an interval to cycle through images every 3 seconds (adjust as needed)
+        setInterval(cycleImages, 3000);
+    </script>
+</body>
+
+</html>
